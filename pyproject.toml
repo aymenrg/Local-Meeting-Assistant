@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-x"
+version = "0.1.0"
+description = "Local Sales Copilot on Ubuntu (Offline & Private)"
+requires-python = ">=3.10"
+dependencies = [
+    "PyQt6==6.7.0",
+    "pydantic==2.7.1",
+    "httpx==0.27.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.2.0",
+    "flake8==7.0.0",
+    "fastapi==0.111.0",
+    "uvicorn==0.29.0",
+    "prometheus-client==0.20.0"
+]
