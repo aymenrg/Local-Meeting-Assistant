@@ -18,3 +18,9 @@ class ISummaryPresenter(ABC):
     def display_summary(self, view_model: UIUpdateViewModel) -> None:
         """Pushes the generated AI response to the PyQt UI overlay."""
         pass
+
+class IAudioTranscriber(ABC):
+    @abstractmethod
+    async def transcribe_audio_chunk(self, audio_data: bytes) -> str:
+        """Converts raw audio bytes into text locally."""
+        pass
